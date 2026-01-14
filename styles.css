@@ -1,25 +1,25 @@
-/* ===== Reset / Base ===== */
+/* ===== Reset ===== */
 * {
   box-sizing: border-box;
 }
 
+/* ===== Base ===== */
 body {
   margin: 0;
   background-color: aquamarine;
   color: #222;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Courier New", monospace;
   line-height: 1.6;
   text-align: center;
 }
 
-/* ===== General ===== */
+/* ===== Headings & Links ===== */
 a {
   color: #111;
   text-decoration: none;
 }
 
 h1 {
-  text-align: center;
   font-size: 34px;
   margin: 24px 0 16px;
 }
@@ -32,19 +32,6 @@ h2 {
 h3 {
   font-size: 18px;
   margin: 18px 0 8px;
-}
-
-ul,
-ol {
-  display: inline-block;
-  text-align: left;
-}
-
-/* ===== Layout Container (recipes pages) ===== */
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 24px;
 }
 
 /* ===== Navbar (index page) ===== */
@@ -76,10 +63,10 @@ ol {
   background-color: #f3f3f3;
 }
 
-/* ===== Home link on recipe pages ===== */
+/* ===== Home button (recipe pages) ===== */
 .home {
   display: inline-block;
-  margin-bottom: 16px;
+  margin: 16px 0;
   padding: 10px 14px;
 
   background-color: white;
@@ -90,61 +77,79 @@ ol {
 /* ===== Images ===== */
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
+  max-width: 450px;
   height: auto;
   margin: 0 auto 20px;
   border-radius: 12px;
 }
 
-/* ===== Recipe Sections ===== */
+/* ===== Sections (FULL WIDTH) ===== */
 .description,
 .ingredients,
 .steps {
+  width: 100%;
   background-color: white;
   border: 1px solid #e6e6e6;
   border-radius: 12px;
-
   padding: 18px 20px;
   margin: 18px 0;
 }
 
+/* ===== Description ===== */
 .description {
   text-align: center;
 }
 
 /* ===== Ingredients ===== */
+.ingredients {
+  text-align: center;
+}
+
 .ingredients ul {
+  list-style: disc;
+  list-style-position: inside;
+  padding: 0;
   margin: 8px 0 0;
-  padding-left: 20px;
+
+  display: inline-block;
+  text-align: left;
 }
 
 .ingredients li {
   margin-bottom: 6px;
-  list-style: disc;
 }
 
 .ingredients span {
-  color: #d10000;
+  color: red;
   font-weight: bold;
 }
 
 /* ===== Steps ===== */
-.steps ol {
-  margin: 8px 0 0;
-  padding-left: 20px;
+.steps {
+  text-align: center;
 }
 
+.steps ol {
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+/* center each step as a block, readable text */
 .steps li {
-  margin-bottom: 10px;
+  max-width: 900px;
+  margin: 0 auto 10px;
+  text-align: left;
 }
 
 /* ===== Footer ===== */
 footer {
-  text-align: center;
   margin-top: 24px;
-  padding-bottom: 12px;
+  padding: 12px 0 18px;
+  text-align: center;
 }
 
 footer a {
-  color: #8b2b2b;
+  color: brown;
 }
